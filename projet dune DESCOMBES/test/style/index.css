@@ -1,0 +1,244 @@
+* {
+  margin: 0;
+}
+body {
+  background-color: rgba(0, 128, 0, 0.355);
+}
+#layer1:hover {
+  color: #f61c0d;
+}
+#layer0:hover {
+  color: #03a9f4;
+}
+/*
+#capa1 {
+  color:blue;
+}
+#capa2 {
+color:red;
+}
+#capa:hover  #capa1{
+  color:red;
+}
+#capa:hover  #capa2{
+  color:blue;
+}*/
+
+footer {
+  width: 100%;
+  background-color: green;
+  color: white;
+  text-align: center;
+  position: relative;
+  top: 0;
+}
+section {
+  margin: 5px;
+}
+#menu-icon{
+  float: right;
+  width: 30px;
+  height: 40px;
+  margin-right: 10px;
+  margin-top: 5px;
+  position: relative;
+  width: 54px;
+  height: 54px;
+  z-index: 10;
+  transition: transform 0.5s;
+}
+body > img {
+  height: 50%;
+}
+header > label >svg {
+  width:2em;
+height: 3em;
+}
+img:not(header > img) {
+  width: 100%;
+  height: 50%;
+}
+
+section {
+  background-color: darkred;
+}
+
+section:hover {
+  transform: scale(1.2);
+}
+/*header > input {
+  display: none;
+}*/
+ul {
+  position: fixed;
+  top: 0vh;
+  left: -100vw;
+  background-color: lightblue;
+  height: 100%;
+  z-index: 1;
+  text-align: center;
+  transition: left 1s;
+}
+ul > label {
+  position: absolute;
+  left: 50%;
+  top: 85%;
+  font-size: 30px;
+  transition: transform 500ms;
+}
+
+ul > p {
+  height: 20vh;
+  border: solid 1px black;
+  margin: 5px;
+  text-align: center;
+  font-size: 18px;
+  text-align: center;
+  vertical-align: middle;
+  line-height: 19vh;
+  transition: background 0.2s, color.5s;
+}
+ul > p:hover {
+  color: lightgrey;
+  background-color: rgb(37, 93, 26);
+}
+#menu:checked ~ ul {
+  left: 0vw;
+}
+#logo:checked  ~label > svg {
+ color: green;
+}
+
+ul > label:hover {
+  transform: rotateZ(180deg);
+}
+div {
+  transition: transform 500ms;
+  width: 20%;
+  display: inline-block;
+}
+
+#trans {
+  left: 20%;
+}
+#trans2 {
+  left: 40%;
+}
+#trans3 {
+  left: 60%;
+}
+#car,#car2,#car3 {
+position: relative;
+top: 1.5em;
+left: 15em;
+}
+#car2:checked ~ #trans {
+  transform: translate(100%);
+}
+#car2:checked ~ #trans2 {
+  transform: translate(100%);
+}
+#car2:checked ~ #trans3 {
+  transform: translate(-200%);
+}
+
+#car3:checked ~ #trans {
+  transform: translate(200%);
+}
+#car3:checked ~ #trans2 {
+  transform: translate(-100%);
+}
+#car3:checked ~ #trans3 {
+  transform: translate(-100%);
+}
+
+h1 {
+  text-align: center;
+  margin-top: 0.7em;
+}
+/* Est-ce bien utile d'utiliser des varaibles CSS non vues en cours ? */
+/* On peut utiliser des variables CSS déclarées comme ceci, locales ou globales */
+/* Ca peut être assez pratique (on verra au S3) */
+/* clamp() c'est pas mal, très utile aussi, assez récent comme fonctione 
+  --minFontSize: 25px;
+  --maxFontSize: 200px;
+  --scaler: 8vw;
+  font-size: clamp(var(--minFontSize), var(--scaler), var(--maxFontSize));
+}non, j'ai juste recopiée mais j'ai essayer juste pour voir ce que cela fait */
+/* Sinon pas de soucis ? 
+nan, je fait des test avec transform 
+OK bonne continuation alors !
+merci */
+
+
+#menu-icon span {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translateX(-50%) translateY(-50%);
+  display: block;
+  width: 22px;
+  height: 2px;
+  background-color: #fff;
+  
+}
+
+header > label > span::before,
+header > label > span::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  transform: translateY(-6px);
+  display: block;
+  width: 22px;
+  height: 2px;
+  background-color: #fff;
+  transition: 0.5s;
+}
+header > label > span::after {
+  transform: translateY(6px);
+}
+
+
+#menu-icon:hover span {
+  background: transparent;
+}
+#menu-icon:hover ::before {
+  transform: translateY(0) rotate(45deg);
+}
+#menu-icon:hover ::after {
+  transform: translateY(0) rotate(-45deg);
+}
+
+@media (min-width: 10px) {
+  ul {
+    width: 100%;
+  }
+}
+
+@media (min-width: 480px) {
+  main {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+  ul {
+    width: 100%;
+  }
+}
+@media (min-width: 768px) {
+  ul {
+    width: 45%;
+  }
+}
+@media (min-width: 992px) {
+  main {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+  ul {
+    width: 30%;
+  }
+}
+@media (min-width: 1200px) {
+}
