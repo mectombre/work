@@ -1,0 +1,29 @@
+body{
+    text-align: center;
+    background-color: darkseagreen;
+}
+
+td, th{    
+    border: 1pt solid red;
+    padding: 5px;    
+    background-color:cornsilk;
+}
+
+main{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 30px;    
+}
+
+section{
+    margin: auto;
+}
+section :first-of-type{
+    grid-column: 1;
+    
+}
+
+section :nth-of-type(2){
+    grid-column: 2;
+    color: rgb(107, 17, 17);
+}

@@ -1,0 +1,24 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+footer {
+    text-align: center;
+    background-color: blue;
+}
+header {
+   display: grid;
+    grid-template-columns: 6fr 1fr;
+    background-color: blue;
+    text-align: center;
+    font-size: 30px;
+}
+main {
+    background-color:darkblue ;
+    display: grid;
+    grid-template-columns: 5fr 1fr ;
+}
+body {
+    background-color: brown;
+    text-align: center;
+}
